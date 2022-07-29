@@ -8,15 +8,13 @@ export const ContactsItem = styled.li`
   padding: ${p => p.theme.space[2]}px;
   align-items: center;
   justify-content: space-between;
-  background-color: ${p => p.theme.colors.white};
-  
+  background-color: ${p => p.theme.colors.white}; 
 `;
 
 export const DeleteButton = styled.button`
   display: flex;
   align-items: center;
   padding: ${p => p.theme.space[2]}px;
-  color: ${p => p.theme.colors.black};
   `;
 
 export const Text = styled.p``;

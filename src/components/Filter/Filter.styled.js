@@ -13,7 +13,7 @@ export const FilterContainer = styled.label`
 `;
 
 export const FilterInput = styled.input`
-  width: 300px;
+  width: 500px;
   margin-top: ${p => p.theme.space[2]}px;
   padding: ${p => p.theme.space[2]}px;
   

@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 export const ContactsTitle = styled.h2`
-  
   font-size: ${p => p.theme.fontSizes.l};
   font-weight: ${p => p.theme.fontWeights.bold};
   text-align: center;

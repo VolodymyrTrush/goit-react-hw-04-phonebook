@@ -10,7 +10,7 @@ export const Box = styled(Form)`
 `;
 
 export const Input = styled(Field)`
-  width: 300px;
+  width: 500px;
   margin-top: ${p => p.theme.space[2]}px;
   padding: ${p => p.theme.space[2]}px;
   
