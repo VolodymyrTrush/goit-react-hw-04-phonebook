@@ -1,35 +1,26 @@
+
 import PropTypes from 'prop-types';
 import { ContactListItem } from './ContactListItem/ContactListItem';
+import { ContactsTitle, List } from './ContactList.stiled';
 
-export const ContactList = ({ contacts, onDeleteContact }) => {
-    return (
-        <ul>
-        {contacts.map((
-          { id, name, number }
-        ) => (
+export default function ContactList({ contactsInfo, deleteContact }) {
+  return (
+    <div>
+      <ContactsTitle>Contacts list</ContactsTitle>
+      <List>
+        {contactsInfo?.map(item => (
           <ContactListItem
-            key={id}
-            id={id}
-            name={name}
-            number={number}
-            onDeleteContact={onDeleteContact}
+            item={item}
+            key={item.id}
+            deleteContact={deleteContact}
           />
         ))}
-      </ul>
-
-  
+      </List>
+    </div>
   );
 }
 
-export default ContactList;
-
 ContactList.propTypes = {
-  contacts: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.string.isRequired,
-      name: PropTypes.string.isRequired,
-      number: PropTypes.string.isRequired,
-    }),
-  ),
-  onDeleteContact: PropTypes.func.isRequired,
-}
+  contactsInfo: PropTypes.arrayOf(PropTypes.shape),
+  deleteContact: PropTypes.func,
+};

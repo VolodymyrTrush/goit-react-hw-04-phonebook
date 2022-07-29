@@ -1,21 +1,18 @@
+
 import PropTypes from 'prop-types';
-import { ContactListItemContainer } from './ContactListItem.styled';
-
-export const ContactListItem = ({ id, name, number, onDeleteContact }) => {
-    return (    
-        <li>
-            <ContactListItemContainer>
-                    <p>{name}</p>
-                    <p>{number}</p>
-                <button type='button' onClick={() => onDeleteContact(id)}>Delete</button>
-            </ContactListItemContainer>
-        </li>
-        )
-    }
-
+import { ContactsItem, DeleteButton, Text } from './ContactListItem.styled';
+export const ContactListItem = ({ item, deleteContact }) => {
+  return (
+    <ContactsItem>
+      <Text>Name: {item.name}</Text>
+      <Text>Number: {item.number}</Text>
+      <DeleteButton type="button" onClick={() => deleteContact(item.id)}>
+        Delete
+      </DeleteButton>
+    </ContactsItem>
+  );
+};
 ContactListItem.propTypes = {
-    id: PropTypes.string.isRequired,
-    name: PropTypes.string.isRequired,
-    number: PropTypes.string.isRequired,
-    onDeleteContact: PropTypes.func.isRequired,
-}
+  deleteContact: PropTypes.func,
+  item: PropTypes.objectOf(PropTypes.string),
+};
