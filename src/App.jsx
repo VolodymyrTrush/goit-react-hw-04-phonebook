@@ -4,7 +4,7 @@ import { nanoid } from 'nanoid';
 import { ContactsReviewForm } from './components/ContactForm/ContactForm';
 import ContactList from './components/ContactList/ContactList';
 import { Filter } from './components/Filter/Filter';
-import { Container, Title } from './components/container.styled';
+import { Container, Title } from './components/ui/container.styled';
 
 export default function App() {
   const initialContacts = [
