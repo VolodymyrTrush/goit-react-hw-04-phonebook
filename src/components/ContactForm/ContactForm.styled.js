@@ -19,7 +19,7 @@ export const InputName = styled.label`
   display: flex;
   flex-direction: column;
   margin-top: ${p => p.theme.space[2]}px;
-  color: ${p => p.theme.colors.accentText};
+  
 `;
 
 export const SubmitButton = styled.button`

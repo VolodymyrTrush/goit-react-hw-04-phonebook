@@ -8,7 +8,7 @@ export const ContactsReviewForm = ({ submitForm }) => {
     <Formik initialValues={{ name: '', number: '' }} onSubmit={submitForm}>
       <Box>
         <InputName>
-          name
+          Name
           <Input
             autoComplete="off"
             type="text"
@@ -20,7 +20,7 @@ export const ContactsReviewForm = ({ submitForm }) => {
           />
         </InputName>
         <InputName>
-          phone
+          Phone
           <Input
             autoComplete="off"
             type="tel"
