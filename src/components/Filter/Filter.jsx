@@ -10,9 +10,8 @@ export const Filter = ({ filter, onFilter }) => {
         type="text"
         name="filter"
         value={filter}
-        onChange={onFilter}
-        
-      ></FilterInput>
+        onChange={onFilter}  
+      />
     </FilterContainer>
   );
 };
